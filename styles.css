@@ -1,0 +1,75 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  transition: all 0.3s ease;
+}
+
+/* Section Styles */
+.section {
+  display: none;
+  padding: 20px;
+  text-align: center;
+  background: #f4f4f9;
+  color: #333;
+  min-height: 100vh;
+}
+
+.section.active {
+  display: block;
+}
+
+/* Bottom Navigation Bar */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.bottom-nav a {
+  position: relative;
+  color: transparent; /* Initially hide text */
+  text-decoration: none;
+  font-size: 16px;
+  text-align: center;
+  flex-grow: 1;
+  transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent; /* Disable ripple effect */
+  outline: none;
+}
+
+.bottom-nav a i {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #a6a6b3; /* Default icon color */
+}
+
+.bottom-nav a span {
+  display: none; /* Hide text initially */
+  font-size: 12px;
+  transition: color 0.3s ease;
+}
+
+.bottom-nav a.active span {
+  display: inline; /* Show text for active tab */
+  color: #41a2d7; /* Active text color */
+}
+
+.bottom-nav a.active i {
+  color: #41a2d7; /* Active icon color */
+}
+
+.bottom-nav a:hover i {
+  transform: scale(1.2) translateY(-5px); /* Hover effect on icons */
+}
